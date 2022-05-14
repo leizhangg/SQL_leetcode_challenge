@@ -1,1 +1,1 @@
-# SQL_leetcode_challenge-
+# SQL_leetcode_challenge
