@@ -1,0 +1,47 @@
+-- Question7
+-- There is a table courses with columns: student and class
+
+-- Please list out all classes which have more than or equal to 5 students.
+
+-- For example, the table:
+
+-- +---------+------------+
+-- | student | class      |
+-- +---------+------------+
+-- | A       | Math       |
+-- | B       | English    |
+-- | C       | Math       |
+-- | D       | Biology    |
+-- | E       | Math       |
+-- | F       | Computer   |
+-- | G       | Math       |
+-- | H       | Math       |
+-- | I       | Math       |
+-- +---------+------------+
+
+Solutions:
+
+create table courses(
+  student varchar (20),
+  class varchar (20)
+  );
+ insert into courses(
+   student,
+   class
+  )
+  values 
+  ('A','Math'),
+  ('B','English'),
+  ('C','Math'),
+  ('D','Biology'),
+  ('E','Computer'),
+  ('F','Math'),
+  ('G','Math'),
+  ('H','Math'),
+  ('I','Math');
+ 
+ SELECT class
+ from courses
+ group by class
+ having count(class)>=5;
+ 
